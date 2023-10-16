@@ -1,10 +1,11 @@
 public class MaterialBibliografico {
-    String autor, añoPublicacion, nombre;
+    String autor, añoPublicacion, nombre, tipo;
 
-    public MaterialBibliografico(String autor, String añoPublicacion, String nombre) {
+    public MaterialBibliografico(String autor, String añoPublicacion, String nombre, String tipo) {
         this.autor = autor;
         this.añoPublicacion = añoPublicacion;
         this.nombre = nombre;
+        this.tipo = tipo;
     }
 
     public String getAutor() {
@@ -30,4 +31,17 @@ public class MaterialBibliografico {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String generarCitaAPA(String autor, String fecha, String nombreMaterial){
+        return (autor + ". (" + fecha + ")." + nombreMaterial);
+    }
+
 }

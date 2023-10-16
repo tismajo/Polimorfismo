@@ -1,7 +1,8 @@
-public class ArchivoPDF {
+public class ArchivoPDF extends MaterialBibliografico{
     String url;
 
-    public ArchivoPDF(String url) {
+    public ArchivoPDF(String autor, String añoPublicacion, String nombre, String tipo, String url) {
+        super(autor, añoPublicacion, nombre, tipo);
         this.url = url;
     }
 
@@ -12,4 +13,5 @@ public class ArchivoPDF {
     public void setUrl(String url) {
         this.url = url;
     }
-}
+
+    }
